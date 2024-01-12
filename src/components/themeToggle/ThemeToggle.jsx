@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import {FaMoon} from "react-icons/fa";
 import {IoMdSunny} from "react-icons/io";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const ThemeToggle = () => {
+    const {theme} = useContext(ThemeContext);
+    console.log(theme);
 	return (
 		<div className="bg-gray-900 w-12 h-6 rounded-3xl flex cursor-pointer items-center justify-between relative">
 			<FaMoon className="text-white w-3 h-3 ml-1" />
