@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 	};
 
 	if (!mounted) {
-		return <di className="rounded-3xl w-12 h-6 bg-gray-100"></di>;
+		return <div className="rounded-3xl w-12 h-6 bg-gray-100"></div>;
 	} else {
 		return (
 			<div onClick={toggle} className={clsx("bg-gray-100 w-12 h-6 rounded-3xl flex cursor-pointer items-center justify-between border border-gray-300 relative dark:bg-gray-900")}>

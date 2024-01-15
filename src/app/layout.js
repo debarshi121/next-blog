@@ -17,7 +17,7 @@ export default function RootLayout({children}) {
 			<body className={inter.className}>
 				<ThemeProvider>
 					<div className="h-screen bg-white dark:bg-gray-900">
-						<div className="container mx-auto">
+						<div className="container mx-auto px-5">
 							<Navbar />
 							{children}
 							<Footer />
