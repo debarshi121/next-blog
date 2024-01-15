@@ -1,18 +1,18 @@
 "use client";
 
-import React from "react";
+import React, {useContext} from "react";
 import {FaMoon} from "react-icons/fa";
 import {IoMdSunny} from "react-icons/io";
-import { useContext } from "react";
-import { ThemeContext } from "@/context/ThemeContext";
+import {ThemeContext} from "@/context/ThemeContext";
+import clsx from "clsx";
 
 const ThemeToggle = () => {
-    const {theme} = useContext(ThemeContext);
-    console.log(theme);
+	const {toggle, theme} = useContext(ThemeContext);
+
 	return (
-		<div className="bg-gray-900 w-12 h-6 rounded-3xl flex cursor-pointer items-center justify-between relative">
+		<div onClick={toggle} className={clsx("bg-gray-900 w-12 h-6 rounded-3xl flex cursor-pointer items-center justify-between relative")}>
 			<FaMoon className="text-white w-3 h-3 ml-1" />
-			<div className="w-4 h-4 bg-white rounded-full absolute left-1"></div>
+			<div className={clsx("w-4 h-4 bg-white rounded-full absolute", theme === "dark" ? "right-1" : "left-1")}></div>
 			<IoMdSunny className="text-yellow-500 w-4 h-4 mr-1" />
 		</div>
 	);
