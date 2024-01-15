@@ -1,17 +1,11 @@
 "use client";
 
-import React, {useContext, useEffect, useState} from "react";
-import {ThemeContext} from "@/context/ThemeContext";
+import {ThemeProvider} from "next-themes";
 
-const ThemeProvider = ({children}) => {
-	const {theme} = useContext(ThemeContext);
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (mounted) return <div className={theme}>{children}</div>;
-};
-
-export default ThemeProvider;
+export default function Provider({children}) {
+	return (
+		<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+			{children}
+		</ThemeProvider>
+	);
+}
