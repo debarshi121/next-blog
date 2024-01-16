@@ -13,7 +13,7 @@ const Humburger = () => {
 			<IoMdMenu onClick={() => setOpen(true)} className="w-8 h-8 -mt-1 block lg:hidden" />
 
 			{open && (
-				<div className="flex-1 flex items-center flex-col gap-3 lg:hidden w-full absolute bg-white h-screen dark:bg-gray-900">
+				<div className="flex-1 flex items-center flex-col gap-3 lg:hidden w-full absolute bg-white dark:bg-gray-900">
 					<ThemeToggle />
 					<Link href={"/"}>Home</Link>
 					<Link href={"/"}>Contact</Link>
