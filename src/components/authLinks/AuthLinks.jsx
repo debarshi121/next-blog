@@ -8,7 +8,7 @@ const AuthLinks = () => {
 		<>
 			<div>
 				{!isAuthenticated ? (
-					<Link href={"/"}>Login</Link>
+					<Link href={"/login"}>Login</Link>
 				) : (
 					<>
 						<Link href={"/write"}>Write</Link>
