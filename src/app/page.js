@@ -8,8 +8,10 @@ export default function Home() {
 		<div>
 			<Featured />
 			<CategoryList />
-			<CardList />
-			<Menu />
+			<div className="flex flex-col lg:flex-row mt-10 gap-10">
+				<CardList />
+				<Menu />
+			</div>
 		</div>
 	);
 }
