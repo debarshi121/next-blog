@@ -19,7 +19,7 @@ const page = () => {
 					</div>
 				</div>
 				<div className="flex-1">
-					<Image src="/2.webp" alt="" width={500} height={400} className="w-full rounded" />
+					<Image src="/1.webp" alt="" width={500} height={400} className="w-full rounded" />
 				</div>
 			</div>
 

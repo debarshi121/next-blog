@@ -6,7 +6,7 @@ const Card = () => {
 	return (
 		<div className="flex gap-10">
 			<div className="flex-1">
-				<Image src="/2.webp" alt="" width={500} height={500} className="w-full rounded"></Image>
+				<Image src="/1.webp" alt="" width={500} height={500} className="w-full rounded"></Image>
 			</div>
 			<div className="flex-1 flex flex-col gap-3">
 				<div>
