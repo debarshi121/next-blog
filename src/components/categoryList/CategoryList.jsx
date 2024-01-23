@@ -1,40 +1,10 @@
+import {getCategories} from "@/services/category.service";
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
-const CategoryList = () => {
-	const data = [
-		{
-			imgSrc: "/categories/coding.jpg",
-			name: "Coding",
-			bgColor: "bg-blue-100",
-		},
-		{
-			imgSrc: "/categories/fashion.png",
-			name: "Fashion",
-			bgColor: "bg-green-100",
-		},
-		{
-			imgSrc: "/categories/tour.jpg",
-			name: "Tour",
-			bgColor: "bg-red-100",
-		},
-		{
-			imgSrc: "/categories/coding.jpg",
-			name: "Food",
-			bgColor: "bg-yellow-100",
-		},
-		{
-			imgSrc: "/categories/fashion.png",
-			name: "Festival",
-			bgColor: "bg-indigo-100",
-		},
-		{
-			imgSrc: "/categories/tour.jpg",
-			name: "Finance",
-			bgColor: "bg-lime-100",
-		},
-	];
+const CategoryList = async () => {
+	const data = await getCategories();
 	return (
 		<div className="mt-10">
 			<h3 className="text-2xl font-bold">Popular Categories</h3>
