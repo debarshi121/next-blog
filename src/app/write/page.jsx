@@ -1,5 +1,7 @@
 "use client";
 
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React, {useState} from "react";
 import {FaImage, FaUpload} from "react-icons/fa";
 import {FaPlus} from "react-icons/fa6";
@@ -8,8 +10,20 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 const WritePage = () => {
-	const [open, setOpen] = useState(false);
+	const {status} = useSession();
+	const router = useRouter();
+    const [open, setOpen] = useState(false);
 	const [value, setValue] = useState("");
+
+	useEffect(() => {
+		if (status === "authenticated") {
+			router.push("/");
+		}
+	}, [status, router]);
+
+	if (status === "loading") return <div>Loading...</div>;
+
+
 	return (
 		<div className="flex flex-col gap-5 mt-10">
 			<input type="text" className="border border-gray-300 rounded py-2 px-3" placeholder="Your awesome title here!" />

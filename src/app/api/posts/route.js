@@ -1,7 +1,7 @@
 import prisma from "@/utils/connect";
 import {NextResponse} from "next/server";
 
-export const GET = async () => {
+export const GET = async (req) => {
 	try {
 		const {searchParams} = new URL(req.url);
 
